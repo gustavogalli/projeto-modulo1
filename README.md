@@ -1,0 +1,1 @@
+Projeto de conclusão do módulo 1 do bootcamp de Pessoa Desenvolvedora Java Fullstack da Generation Brasil. Desenvolvemos um jogo em que personagens podem batalhar entre si através do console, utilizando conceitos de Programação Orientada a Objetos, como Encapsulamento, Herança e Polimorfismo.
