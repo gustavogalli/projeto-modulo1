@@ -8,7 +8,6 @@ public abstract class Player {
 	private int mana;
 	private String arma1;
 	private String arma2;
-	boolean pocaoBebida;
 
 	// Métodos
 	public void status() {
@@ -17,15 +16,18 @@ public abstract class Player {
 		System.out.println("MANA: " + this.getMana());
 		System.out.println("ARMA 1: " + this.getArma1());
 		System.out.println("ARMA 2: " + this.getArma2());
-		System.out.println("POÇÃO: " + this.isPocaoBebida());
 	}
-	
+
 	public void atacar() {
-		
+
 	}
 	
-	public void morrer() {
+	public void calcularAtaque() {
 		
+	}
+
+	public void morrer() {
+
 	}
 
 	// Métodos especiais
@@ -67,14 +69,6 @@ public abstract class Player {
 
 	public void setArma2(String arma2) {
 		this.arma2 = arma2;
-	}
-
-	public boolean isPocaoBebida() {
-		return pocaoBebida;
-	}
-
-	public void setPocaoBebida(boolean pocaoBebida) {
-		this.pocaoBebida = pocaoBebida;
 	}
 
 }
