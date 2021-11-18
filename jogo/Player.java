@@ -22,12 +22,20 @@ public abstract class Player {
 
 	}
 	
+	public void verificar() {
+		
+	}
+	
+	public void ganhar() {
+		
+	}
+	
 	public void calcularAtaque() {
 		
 	}
 
-	public void morrer() {
-
+	public void usarEspecial() {
+		
 	}
 
 	// Métodos especiais
