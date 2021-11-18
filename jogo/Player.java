@@ -18,25 +18,15 @@ public abstract class Player {
 		System.out.println("ARMA 2: " + this.getArma2());
 	}
 
-	public void atacar() {
-
-	}
-	
-	public void verificar() {
-		
-	}
-	
-	public void ganhar() {
-		
-	}
-	
-	public void calcularAtaque() {
-		
-	}
-
-	public void usarEspecial() {
-		
-	}
+	public abstract void atacar(Player oponente);
+	public abstract void usarEspecial(Player oponente);
+	public abstract void atingir(Player oponente);
+	public abstract void atingirEspecial(Player oponente);
+	public abstract void verificar(Player oponente);
+	public abstract void mensagemAtaque(Player oponente, int dano);
+	public abstract void mensagemEspecial(Player oponente, int dano);
+	public abstract void ganhar(Player oponente);
+	public abstract int calcularDano();
 
 	// Métodos especiais
 	public String getNome() {

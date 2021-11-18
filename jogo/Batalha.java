@@ -10,8 +10,10 @@ public class Batalha {
 		p1.setNome("Gustavo");
 		p2.setNome("Borges");
 
-		p1.atacar(p2, 10);
-		p2.atacar(p1, 30);
+		p1.atacar(p2);
+		p2.atacar(p1);
+		
+		p1.usarEspecial(p2);
 		
 		
 		
