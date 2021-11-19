@@ -4,7 +4,7 @@ public class Guerreiro extends Player {
 
 	public Guerreiro(String nome) {
 		this.setNome(nome);
-		this.setHp(75);
+		this.setHp(150);
 		this.setMana(75);
 		this.setClasse("Guerreiro");
 		this.setVivo(true);
@@ -22,14 +22,16 @@ public class Guerreiro extends Player {
 	@Override
 	public void recuperar() {
 		this.setHp(getHp() + 10);
-		this.setMana(getMana() + 20);
+		this.setMana(getMana() + 10);
 	}
 
 	@Override
 	public void descansar() {
 		this.setHp(getHp() + 20);
 		this.setMana(getMana() + 40);
+		System.out.println("\n--------------------------------------");
 		System.out.println(this.getNome() + " resolveu descansar.");
+		System.out.println("--------------------------------------\n");
 	}
 
 	@Override
@@ -42,11 +44,22 @@ public class Guerreiro extends Player {
 	@Override
 	public void atingir(Player oponente, int tipoAtaque) {
 		if (tipoAtaque == 1) {
-			int dano = this.calcularDano();
-			oponente.setHp(oponente.getHp() - dano);
-			this.setMana(this.getMana() - 20);
-			this.mensagem(oponente, dano, tipoAtaque);
+			if (this.getMana() < 20) {
+				System.out.println("\n--------------------------------------");
+				System.out.println(this.getNome() + ", você está sem Mana!");
+				System.out.println("--------------------------------------\n");
+			} else {
+				int dano = this.calcularDano();
+				oponente.setHp(oponente.getHp() - dano);
+				this.setMana(this.getMana() - 20);
+				this.mensagem(oponente, dano, tipoAtaque);
+			}
 		} else {
+			if (this.getMana() < 40) {
+				System.out.println("\n--------------------------------------");
+				System.out.println(this.getNome() + ", você está sem Mana!");
+				System.out.println("--------------------------------------\n");
+			}
 			int dano = this.calcularDano() * 2;
 			oponente.setHp(oponente.getHp() - dano);
 			this.setMana(this.getMana() - 40);
@@ -57,7 +70,7 @@ public class Guerreiro extends Player {
 	@Override
 	public void mensagem(Player oponente, int dano, int tipoAtaque) {
 		if (tipoAtaque == 1) {
-			System.out.println("--------------------------------------\n");
+			System.out.println("\n--------------------------------------");
 			System.out.println(this.getNome() + " deu um soco na barriga de " + oponente.getNome() + "!");
 			if (dano == 50) {
 				System.out.println("Dano crítico: 50");
@@ -67,11 +80,14 @@ public class Guerreiro extends Player {
 				System.out.println("--------------------------------------\n");
 			}
 		} else {
+			System.out.println("\n--------------------------------------");
 			System.out.println(this.getNome() + " soltou um Kamehameha em " + oponente.getNome());
 			if (dano == 100) {
 				System.out.println("DANO CRÍTICO: 100");
+				System.out.println("--------------------------------------\n");
 			} else {
 				System.out.println("DANO: " + dano);
+				System.out.println("--------------------------------------\n");
 			}
 		}
 	}
@@ -101,7 +117,10 @@ public class Guerreiro extends Player {
 	}
 
 	public void ganhar(Player oponente) {
-		System.out.println(oponente.getNome() + " morreu!\n" + this.getNome().toUpperCase() + " VENCEU!\n");
+		System.out.println("\n======================================");
+		System.out.println(oponente.getNome() + " morreu!\n" + this.getNome().toUpperCase() + " VENCEU!");
+		System.out.println("======================================\n");
+//		System.out.println("--------------------------------------\n");
 	}
 
 }

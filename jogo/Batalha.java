@@ -12,9 +12,9 @@ public class Batalha {
 
 		Scanner in = new Scanner(System.in);
 
-		System.out.println("**************************************");
+		System.out.println("======================================");
 		System.out.println("            VAMOS COMEÇAR!            ");
-		System.out.println("**************************************");
+		System.out.println("======================================");
 		System.out.println();
 		;
 		for (int i = 1; i < 3; i++) {
@@ -71,44 +71,63 @@ public class Batalha {
 		}
 //		in.close();
 
-		System.out.println("\n\n\n");
+		System.out.println("\n\n");
 
 		Player p1 = players.get(0);
 		Player p2 = players.get(1);
 		String p1Nome = players.get(0).getNome().toUpperCase();
 		String p2Nome = players.get(1).getNome().toUpperCase();
 
-		System.out.println("**************************************");
+		System.out.println("======================================");
 		System.out.println("           HORA DA BATALHA!           ");
-		System.out.println("**************************************\n");
+		System.out.println("======================================\n");
 
 //		****************************************************************
 
-		while (p1.isVivo() && p2.isVivo()) {
+		for (int i = 0; i <= 100; i++) {
 
-			System.out.println("**************************************");
-			System.out.println(p1Nome + "\t  |  HP: " + p1.getHp() + "  |  Mana: " + p1.getMana());
-			System.out.println(p2Nome + "\t  |  HP: " + p2.getHp() + "  |  Mana: " + p2.getMana());
-			System.out.println("**************************************\n");
+			System.out.println("======================================");
+			System.out.println(p1Nome + "\t    |  HP: " + p1.getHp() + "    |  Mana: " + p1.getMana());
+			System.out.println(p2Nome + "\t    |  HP: " + p2.getHp() + "    |  Mana: " + p2.getMana());
+			System.out.println("======================================\n");
 
-			System.out.println(p1Nome + ", O QUE VOCÊ VAI FAZER? ");
-			System.out.println("\n[1] Atacar");
-			System.out.println("[2] Usar poder");
-			System.out.println("[3] Descansar");
+			if (i % 2 == 0) {
+				System.out.println(p1Nome + ", O QUE VOCÊ VAI FAZER? ");
+				System.out.println("\n[1] Atacar");
+				System.out.println("[2] Usar poder");
+				System.out.println("[3] Descansar");
 
-			int resposta = in.nextInt();
+				int resposta = in.nextInt();
 
-			if (resposta < 3) {
-				p1.atacar(p2, resposta);
-			} else if (resposta == 3) {
-				p1.descansar();
-				
+				if (resposta < 3) {
+					p1.atacar(p2, resposta);
+				} else if (resposta == 3) {
+					p1.descansar();
+				}
+			} else {
+				System.out.println(p2Nome + ", O QUE VOCÊ VAI FAZER? ");
+				System.out.println("\n[1] Atacar");
+				System.out.println("[2] Usar poder");
+				System.out.println("[3] Descansar");
+
+				int resposta = in.nextInt();
+
+				if (resposta < 3) {
+					p2.atacar(p1, resposta);
+				} else if (resposta == 3) {
+					p2.descansar();
+				}
+			}
+			if (p1.isVivo() == false || p2.isVivo() == false) {
+				break;
 			}
 		}
 
-		System.out.println("**************************************");
-		System.out.println("            FIM DA BATALHA            ");
-		System.out.println("**************************************\n");
 
+		System.out.println("======================================");
+		System.out.println("            FIM DA BATALHA            ");
+		System.out.println("======================================\n");
+		
+		in.close();
 	}
 }

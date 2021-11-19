@@ -10,13 +10,13 @@ public abstract class Player {
 	private boolean vivo;
 
 	// Métodos
-	public void status() {
-		System.out.println("-----------------------------");
-		System.out.println("NOME\t\tHP\tMANA");
-		System.out.println(this.getNome().toUpperCase() + "\t\t" + this.getHp() + "\t" + this.getMana());
-		System.out.println("Vivo? " + this.isVivo());
-		System.out.println("-----------------------------");
-	}
+//	public void status() {
+//		System.out.println("-----------------------------");
+//		System.out.println("NOME\t\tHP\tMANA");
+//		System.out.println(this.getNome().toUpperCase() + "\t\t" + this.getHp() + "\t" + this.getMana());
+//		System.out.println("Vivo? " + this.isVivo());
+//		System.out.println("-----------------------------");
+//	}
 
 	public abstract void apresentar();
 	public abstract void recuperar();
