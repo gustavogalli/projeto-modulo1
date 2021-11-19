@@ -16,7 +16,16 @@ public class Batalha {
 		System.out.println("            VAMOS COMEÇAR!            ");
 		System.out.println("======================================");
 		System.out.println();
-		;
+
+		System.out.println("\nDIGITE:\nQuantas regras você quer?\n[1] [2] [3] [Todas]");
+		try {
+			int resp = in.nextInt();
+			regras(resp);
+		} catch (Exception e) {
+			String resp = in.next();
+			regras(resp);
+		}
+
 		for (int i = 1; i < 3; i++) {
 
 //			System.out.println("\n**************************************");
@@ -133,11 +142,33 @@ public class Batalha {
 			}
 		}
 
-
 		System.out.println("======================================");
 		System.out.println("            FIM DA BATALHA            ");
 		System.out.println("======================================\n");
-		
+
 		in.close();
+	}
+
+	public static void regras(int resp) {
+		System.out.println();
+		switch (resp) {
+		case 3:
+			System.out.println("-> ATACAR usa pouca MANA.");
+		case 2:
+			System.out.println("-> USAR ESPECIAL usa mais MANA, mas pode causar mais dano.");
+		case 1:
+			System.out.println("-> DESCANSAR recupera HP e MANA.");
+		}
+		System.out.println();
+	}
+
+	public static void regras(String resp) {
+		System.out.println();
+		System.out.println("-> ATACAR usa pouca MANA!");
+		System.out.println("-> USAR ESPECIAL usa mais MANA, mas pode causar mais dano.");
+		System.out.println("-> DESCANSAR recupera HP e MANA.");
+		System.out.println("-> BÔNUS: a cada rodada, HP e MANA são levemente restaurados.");
+		System.out.println();
+
 	}
 }
