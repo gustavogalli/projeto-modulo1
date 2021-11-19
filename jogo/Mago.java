@@ -59,11 +59,12 @@ public class Mago extends Player {
 				System.out.println("\n--------------------------------------");
 				System.out.println(this.getNome() + ", você está sem Mana!");
 				System.out.println("--------------------------------------\n");
+			} else {
+				int dano = this.calcularDano() * 2;
+				oponente.setHp(oponente.getHp() - dano);
+				this.setMana(this.getMana() - 40);
+				this.mensagem(oponente, dano, tipoAtaque);
 			}
-			int dano = this.calcularDano() * 2;
-			oponente.setHp(oponente.getHp() - dano);
-			this.setMana(this.getMana() - 40);
-			this.mensagem(oponente, dano, tipoAtaque);
 		}
 	}
 
