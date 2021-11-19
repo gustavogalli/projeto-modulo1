@@ -1,12 +1,12 @@
 package jogo;
 
-public class Guerreiro extends Player {
+public class Arqueiro extends Player {
 
-	public Guerreiro(String nome) {
+	public Arqueiro(String nome) {
 		this.setNome(nome);
-		this.setHp(90);
-		this.setMana(60);
-		this.setClasse("Guerreiro");
+		this.setHp(55);
+		this.setMana(95);
+		this.setClasse("Arqueiro");
 		this.setVivo(true);
 	}
 
@@ -71,7 +71,7 @@ public class Guerreiro extends Player {
 	public void mensagem(Player oponente, int dano, int tipoAtaque) {
 		if (tipoAtaque == 1) {
 			System.out.println("\n--------------------------------------");
-			System.out.println(this.getNome() + " atacou indiretamente " + oponente.getNome() + "!");
+			System.out.println(this.getNome() + " apunhalou " + oponente.getNome() + "!");
 			if (dano == 50) {
 				System.out.println("Dano crítico: 50");
 				System.out.println("--------------------------------------\n");
@@ -81,7 +81,7 @@ public class Guerreiro extends Player {
 			}
 		} else {
 			System.out.println("\n--------------------------------------");
-			System.out.println(this.getNome() + " enfiou a espada em " + oponente.getNome());
+			System.out.println(this.getNome() + " deu uma flechada no joelho de " + oponente.getNome());
 			if (dano == 100) {
 				System.out.println("DANO CRÍTICO: 100");
 				System.out.println("--------------------------------------\n");

@@ -28,41 +28,51 @@ public class Batalha {
 			String nome = in.next();
 
 			System.out.println("\n" + nome.toUpperCase() + ", ESCOLHA SUA CLASSE:\n");
-			System.out.println("[1] GUERREIRO");
-			System.out.println("[2] SHAOLIN MATADOR DE PORCOS");
+			System.out.println("[1] MAGO");
+			System.out.println("[2] SHAOLIN");
 			System.out.println("[3] GARRAS-AFIADAS");
-			System.out.println("[4] HERCULES");
-			System.out.println("[5] AUGUSTO");
-			System.out.println("[6] ANDERSON\n");
+			System.out.println("[4] GUERREIRO");
+			System.out.println("[5] ARQUEIRO");
+			System.out.println("[6] CAVALEIRO\n");
 
 			int tipo = in.nextInt();
 
 			switch (tipo) {
 			case 1:
+				Mago m1 = new Mago(nome);
+				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
+				m1.apresentar();
+				players.add(m1);
+				break;
+			case 2:
+				Shaolin s1 = new Shaolin(nome);
+				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
+				s1.apresentar();
+				players.add(s1);
+				break;
+			case 3:
+				GarrasAfiadas ga1 = new GarrasAfiadas(nome);
+				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
+				ga1.apresentar();
+				players.add(ga1);
+				break;
+			case 4:
 				Guerreiro g1 = new Guerreiro(nome);
 				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
 				g1.apresentar();
 				players.add(g1);
 				break;
-			case 2:
-//				Shaolin s1 = new Shaolin(nome);
-				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
-//				s1.apresentar();
-				break;
-			case 3:
-				System.out.println("Garras afiadas...");
-//				GarrasAfiadas ga1 = new GarrasAfiadas(nome);
-				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
-//				ga1.apresentar();
-				break;
-			case 4:
-				System.out.println("Hercules...");
-				break;
 			case 5:
-				System.out.println("Augusto...");
+				Arqueiro a1 = new Arqueiro(nome);
+				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
+				a1.apresentar();
+				players.add(a1);
 				break;
 			case 6:
-				System.out.println("Anderson...");
+				Cavaleiro c1 = new Cavaleiro(nome);
+				System.out.println("\n---------- PLAYER " + i + " CRIADO -----------");
+				c1.apresentar();
+				players.add(c1);
 				break;
 			default:
 				System.out.println("Você não escolheu nenhum desses!");
@@ -87,8 +97,8 @@ public class Batalha {
 		for (int i = 0; i <= 100; i++) {
 
 			System.out.println("======================================");
-			System.out.println(p1Nome + "\t    |  HP: " + p1.getHp() + "    |  Mana: " + p1.getMana());
-			System.out.println(p2Nome + "\t    |  HP: " + p2.getHp() + "    |  Mana: " + p2.getMana());
+			System.out.println(p1Nome + "\t|  HP: " + p1.getHp() + "\t|  Mana: " + p1.getMana());
+			System.out.println(p2Nome + "\t|  HP: " + p2.getHp() + "\t|  Mana: " + p2.getMana());
 			System.out.println("======================================\n");
 
 			if (i % 2 == 0) {
