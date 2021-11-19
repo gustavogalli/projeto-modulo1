@@ -82,7 +82,7 @@ public class Shaolin extends Player {
 			}
 		} else {
 			System.out.println("\n--------------------------------------");
-			System.out.println(this.getNome() + " jogou um pneu " + oponente.getNome());
+			System.out.println(this.getNome() + " jogou um pneu em " + oponente.getNome() + "!");
 			if (dano == 100) {
 				System.out.println("DANO CRÍTICO: 100");
 				System.out.println("--------------------------------------\n");

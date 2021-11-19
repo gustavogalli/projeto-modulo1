@@ -82,7 +82,7 @@ public class Cavaleiro extends Player {
 			}
 		} else {
 			System.out.println("\n--------------------------------------");
-			System.out.println(this.getNome() + " fez seu cavalo dar um coice em " + oponente.getNome());
+			System.out.println(this.getNome() + " fez seu cavalo dar um coice em " + oponente.getNome() + "!");
 			if (dano == 100) {
 				System.out.println("DANO CRÍTICO: 100");
 				System.out.println("--------------------------------------\n");

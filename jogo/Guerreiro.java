@@ -82,7 +82,7 @@ public class Guerreiro extends Player {
 			}
 		} else {
 			System.out.println("\n--------------------------------------");
-			System.out.println(this.getNome() + " enfiou a espada em " + oponente.getNome());
+			System.out.println(this.getNome() + " enfiou a espada em " + oponente.getNome() + "!");
 			if (dano == 100) {
 				System.out.println("DANO CRÍTICO: 100");
 				System.out.println("--------------------------------------\n");

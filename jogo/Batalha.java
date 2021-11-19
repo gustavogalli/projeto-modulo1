@@ -17,7 +17,7 @@ public class Batalha {
 		System.out.println("======================================");
 		System.out.println();
 
-		System.out.println("\nDIGITE:\nQuantas regras você quer?\n[1] [2] [3] [Todas]");
+		System.out.println("\nDIGITE:\nQuantas regras você quer conhecer?\n[1] [2] [3] [Todas]");
 		try {
 			int resp = in.nextInt();
 			regras(resp);
