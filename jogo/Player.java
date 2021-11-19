@@ -1,6 +1,6 @@
 package jogo;
 
-public abstract class Player {
+public abstract class Player implements Habilidades {
 
 	// Atributos
 	private String nome;
