@@ -4,7 +4,7 @@ public class Mago extends Player {
 
 	public Mago(String nome) {
 		this.setNome(nome);
-		this.setHp(70);
+		this.setHp(120);
 		this.setMana(80);
 		this.setClasse("Guerreiro");
 		this.setVivo(true);

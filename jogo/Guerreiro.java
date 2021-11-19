@@ -4,7 +4,7 @@ public class Guerreiro extends Player {
 
 	public Guerreiro(String nome) {
 		this.setNome(nome);
-		this.setHp(90);
+		this.setHp(140);
 		this.setMana(60);
 		this.setClasse("Guerreiro");
 		this.setVivo(true);

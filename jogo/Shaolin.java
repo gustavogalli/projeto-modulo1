@@ -4,7 +4,7 @@ public class Shaolin extends Player {
 
 	public Shaolin(String nome) {
 		this.setNome(nome);
-		this.setHp(75);
+		this.setHp(125);
 		this.setMana(75);
 		this.setClasse("Shaolin");
 		this.setVivo(true);

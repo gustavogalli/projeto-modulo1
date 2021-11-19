@@ -4,7 +4,7 @@ public class Cavaleiro extends Player {
 
 	public Cavaleiro(String nome) {
 		this.setNome(nome);
-		this.setHp(100);
+		this.setHp(150);
 		this.setMana(50);
 		this.setClasse("Cavaleiro");
 		this.setVivo(true);
