@@ -155,7 +155,7 @@ public class Batalha {
 		case 3:
 			System.out.println("-> ATACAR usa pouca MANA.");
 		case 2:
-			System.out.println("-> USAR ESPECIAL usa mais MANA, mas pode causar mais dano.");
+			System.out.println("-> USAR PODER usa mais MANA, mas pode causar mais dano.");
 		case 1:
 			System.out.println("-> DESCANSAR recupera HP e MANA.");
 		}
@@ -165,7 +165,7 @@ public class Batalha {
 	public static void regras(String resp) {
 		System.out.println();
 		System.out.println("-> ATACAR usa pouca MANA!");
-		System.out.println("-> USAR ESPECIAL usa mais MANA, mas pode causar mais dano.");
+		System.out.println("-> USAR PODER usa mais MANA, mas pode causar mais dano.");
 		System.out.println("-> DESCANSAR recupera HP e MANA.");
 		System.out.println("-> BÔNUS: a cada rodada, HP e MANA são levemente restaurados.");
 		System.out.println();
