@@ -6,7 +6,7 @@ public class Mago extends Player {
 		this.setNome(nome);
 		this.setHp(120);
 		this.setMana(80);
-		this.setClasse("Guerreiro");
+		this.setClasse("Mago");
 		this.setVivo(true);
 	}
 
